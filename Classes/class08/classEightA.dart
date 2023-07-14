@@ -2,26 +2,29 @@
 // Functions with sequensed conditional parameters with named  & unsequense parameters with named
 
 void main() {
-  // studentData(name: 'Mohsin', cnic: 4210159547846);
-  // studentData(name: 'Mohsin', cnic: 4210159547846, bloodGroup: 'B-Positive');
+  studentData(name: 'Mohsin', cnic: 4210159547846);
+  studentData(name: 'Mohsin', cnic: 4210159547846, bloodGroup: 'B-Positive');
+  studentData(
+      name: 'Kamran', cnic: 4210159547846, bloodGroup: 'B-Positive', ward: 'A');
 
   // patientData('Aneela', 85, 'malir', 'karachi');
   // but what would happen if we  pass arguments without sequense
   // patientData(18, 'Aneela', 'hyderabad', 'peshawar');
   // So now, we will use names arguements
-  patientData(age: 18, name: 'Aneela', city: 'Karachi', area: 'Malir');
+  // patientData(age: 18, name: 'Aneela', city: 'Karachi', area: 'Malir');
   // now sequence is perfect
 }
 
-studentData({required name, required cnic, bloodGroup}) {
+studentData({required name, required cnic, bloodGroup, ward = 'c'}) {
   print('Student name is : $name');
   print('Student cnic is : $cnic');
   print('Student blood is (if given) : $bloodGroup');
+  print('Student ward is $ward');
 }
 
-patientData({name, age, area, city}) {
-  print('Mr/Mrs $name lives in $area, $city and he/she is $age years old');
-}
+// patientData({name, age, area, city}) {
+//   print('Mr/Mrs $name lives in $area, $city and he/she is $age years old');
+// }
 
 
 
