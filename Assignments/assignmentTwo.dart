@@ -61,15 +61,71 @@ void main() {
 
   // Solution:
 
-  // List ages = [18, 22, 55, 45, 24];
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-  // int maxNum =
-  // ages.reduce((value, element) => value > element ? value : element);
-  // print(maxNum);
+  // List<int> nums = [14, 98, 65, 56, 87, 26, 10, 9, 2, 3, 5, 7, 9, 14, 68, 99];
 
-  // int minNum =
-  //    ages.reduce((value, element) => value < element ? value : element);
-  // print(minNum);
+  // ***************************************************************************************************
+  // First Solution using for loop
+  // int greatestVal = nums[0];
+  // int lowestVal = nums[0];
+
+  // for (var i = 0; i < nums.length; i++) {
+  //   if (nums[i] > greatestVal) {
+  //     greatestVal = nums[i];
+  //   }
+  // }
+
+  // print('Greates Value is => $greatestVal');
+
+  // for (var i = 0; i < nums.length; i++) {
+  //   if (nums[i] < lowestVal) {
+  //     lowestVal = nums[i];
+  //   }
+  // }
+  // print('Lowest Value is => $lowestVal');
+
+//******************************************************************************************************** */
+  // Second Solution using sort() method
+
+  // nums.sort();
+
+  // print(
+  //     'Greatest value is => ${nums.last} and lowest value is => ${nums.first}');
+
+//******************************************************************************************************* */
+// Third Solution using for each
+
+  // int greatestNum = nums[0];
+  // int lowestNum = nums[0];
+
+  // nums.forEach((element) {
+  //   if (element > greatestNum) {
+  //     greatestNum = element;
+  //   }
+  // });
+
+  // nums.forEach((element) {
+  //   if (element < lowestNum) {
+  //     lowestNum = element;
+  //   }
+  // });
+
+  // print('Greates Value is => $greatestNum');
+  // print('Lowest Value is => $lowestNum');
+
+  // ***************************************************************************************************************************
+  // Using reduce method
+
+  // int greatestVal =
+  //     nums.reduce((value, element) => value > element ? value : element);
+
+  // print(greatestVal);
+
+  // int lowestVal =
+  //     nums.reduce((value, element) => value < element ? value : element);
+
+  // print(lowestVal);
 
   // Q.5: Create a map with name, phone keys and store some values to it.Use where to find all keys that have length 4.
 
@@ -89,31 +145,20 @@ void main() {
 // Q.6: Create Map variable name world then inside it create countries Map, Key will be the name country & country value will have another map having capitalCity,currency and language to it.by using any country key print all the value of Capital & Currency.
 
   // Solution:
-  // Map world = {
+  //  Map<String, dynamic> World = {
   //   'Pakistan': {'capital': 'Islamabad', 'currency': 'PKR', 'language': 'Urdu'},
-  //   'Australia': {
-  //     'capital': 'Cambridge',
-  //     'currency': 'AD',
-  //     'language': 'English'
-  //   },
+  //   'India': {'capital': 'Mumbai', 'currency': 'INR', 'language': 'Hindi'},
   //   'Bangladesh': {
   //     'capital': 'Dhaka',
   //     'currency': 'Taka',
   //     'language': 'Bangali'
   //   }
   // };
+  // // Change the name of the country and see result
+  // String country = 'Bangladesh';
 
-  // String CountryKey = 'Australia';
-  // print(world[CountryKey]);
-  // var countryInfo = world[CountryKey];
-
-  // if (countryInfo != null) {
-  //   var capitalCity = countryInfo['capital'];
-  //   var currency = countryInfo['currency'];
-  //   print('Country: ${CountryKey}');
-  //   print('Capital: ${capitalCity}');
-  //   print('Currency ${currency}');
-  // }
+  // print(
+  //     "Given country is $country, capital of $country is ${World[country]['capital']} and it's currency is ${World[country]['currency']}");
 
   // Q.7:
   // Map<String, double> expenses = {
@@ -125,7 +170,9 @@ void main() {
 
   // Solution:
 
-  // if (expenses.containsKey('fri')) {
+  // bool fri = expenses.containsKey('fri');
+  // print(fri);
+  // if (expenses.keys.contains('fri')) {
   //   expenses['fri'] = 5000.0;
   // } else {
   //   expenses['fri'] = 5000.0;
@@ -164,14 +211,29 @@ Q.8: remove all false values from below list by using removeWhere or retainWhere
 
 // Solution:
 
-  // List<String> names = ['Mohsin', 'Kamran', 'Saim', 'Bilal', 'Taber', 'Mohsin'];
-  // print(names);
-  // print('New List');
+  // SOLUTION:
 
+  // List<String> names = ['Mohsin', 'Hassan', 'Mohsin', 'Arbab', 'Safi'];
   // List<String> newNames = names.toSet().toList();
+
   // print(newNames);
 
   // Q 11: Write a Dart code that takes in a list and an integer n as parameters.The program should print a new list containing the first n elements from the original list.
 
   // Solutions:
+  //SKIPPED
+
+  // Q.12: Write a Dart code that takes in a list of strings and prints a new list with the elements in reverse order. The original list should remain unchanged.
+
+  // Solution:
+
+  // List<String> names = ['Mohsin', 'Bilal', 'Taber'];
+  // print('Orgional List => $names');
+  // List<String> newList = List.of(names.reversed);
+  // print('New reversed list => $newList');
+
+  // Q.13: Implement a code that takes in a list of integers and returns a new list containing only the unique elements from the original list. The order of elements in the new list should be the same as in the original list.
+  // Solutoin
+
+  //  Skipped
 }
