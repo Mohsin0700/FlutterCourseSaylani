@@ -236,4 +236,132 @@ Q.8: remove all false values from below list by using removeWhere or retainWhere
   // Solutoin
 
   //  Skipped
+
+  // Q.14: Write a Dart code that takes in a list of integers and prints a new list with the elements sorted in ascending order. The original list should remain unchanged.
+
+  // SOLUTION:
+
+  // List<int> nums = [5, 4, 5, 8, 12, 65];
+
+  // List newList = List.from(nums);
+
+  // newList.sort();
+
+  // print('Orginal List is $nums');
+  // print('New sorted list is $newList');
+
+  // Q.15: Implement a Dart code that uses the where() method to filter out negative numbers from a list of integers.The program should take in the original list as a parameter and print a new list containing only the positive numbers.
+
+  // List<int> intList = [5, -2, -1, -10, 12, 14, -15, 20];
+
+  // List<int> newList = intList.where((element) => element > 0).toList();
+  // print(newList);
+
+  // Q.16: Implement a Dart code that uses the where() method to filter out odd numbers from a list of integers.The program should take in the original list as a parameter and print a new list containing only the even numbers.
+
+  // List<int> nums = [
+  //   1,
+  //   2,
+  //   3,
+  //   4,
+  //   5,
+  //   6,
+  //   7,
+  //   8,
+  //   9,
+  //   10,
+  //   11,
+  //   12,
+  //   13,
+  //   14,
+  //   15,
+  //   16,
+  //   17,
+  //   18,
+  //   19,
+  //   20
+  // ];
+  // List<int> newNums = nums.where((element) => element % 2 == 0).toList();
+
+  // print(newNums);
+
+  // Q.17: Given a list of integers, write a Dart code that uses the map() method to create a new list with each value squared. The program should take in the original list as a parameter and print the new list.
+
+  // SOLUTION:
+
+  // List<int> nums = [5, 10, 12, 2, 3, 19, 3];
+  // List<int> newNums = nums.map((e) => e * e).toList();
+  // print(newNums);
+
+  // Q.18: Create a map named "person" with the following key-value pairs: "name" as "John", "age" as 25, "isStudent" as true. Write a Dart code to check if the person is both a student and over 18 years old. Print "Eligible" if both conditions are true, otherwise print "Not eligible".
+
+  // SOLUTION:
+
+  // Map<String, dynamic> person = {
+  //   'name': 'John',
+  //   'age': 25,
+  //   'isStudent': true,
+  // };
+
+  // int age = person['age'];
+  // bool isStudent = person['isStudent'];
+
+  // if (age >= 18 && isStudent == true) {
+  //   print('You are eligible');
+  // } else {
+  //   print('You are not eligible');
+  // }
+
+  // Q.19: Given a map representing a product with keys "name", "price", and "quantity", write Dart code to heck if the product is in stock. If the quantity is greater than 0, print "In stock", otherwise print "Out of stock"
+
+  // Map<String, dynamic> product = {'name': 'Milk Pack', 'price': 425, 'qty': 5};
+
+  // if (product['qty'] > 0) {
+  //   print('Product In-Stock');
+  // } else {
+  //   print('Out of stock');
+  // }
+
+  // Q.20: Create a map named "car" with the following key-value pairs: "brand" as "Toyota", "color" as Red", "isSedan" as true. Write Dart code to check if the car is a sedan and red in color. Print "Match" if both conditions are true, otherwise print "No match".
+
+  // Map<String, dynamic> car = {
+  //   'brand': 'Toyota',
+  //   'color': 'red',
+  //   'isSedan': true
+  // };
+
+  // if (car['color'] == 'red' && car['isSedan'] == true) {
+  //   print('Match');
+  // } else {
+  //   print('No Match');
+  // }
+
+  // Q.21: Given a map representing a user with keys "name", "isAdmin", and "isActive", write Dart code to check if the user is an active admin. If the user is both an admin and active, print "Active admin", otherwise print "Not an active admin".
+
+  // Map<String, dynamic> user = {
+  //   'name': 'Mohsin',
+  //   'isAdmin': false,
+  //   'isActive': true
+  // };
+
+  // if (user['isAdmin'] == true && user['isActive'] == true) {
+  //   print('User is an admin and active');
+  // } else if (user['isAdmin'] == true && user['isActive'] == false) {
+  //   print('User is an admin but in-avtive');
+  // } else if (user['isAdmin'] == false && user['isActive'] == true) {
+  //   print('User is not an admin but active');
+  // } else {
+  //   print('User is neither an admint nor active');
+  // }
+
+  // Q.22: Given a map representing a shopping cart with keys as product names and values as quantities, write Dart code to check if a product named "Apple" exists in the cart. Print "Product found" if it exists, otherwise print "Product not found".
+
+//   Map<String, dynamic> cart = {'Shirts': 5, 'Pents': 4, 'Shoes': 1};
+
+//   bool res = cart.keys.contains('Shirts');
+//   if (res == true) {
+//     print('Product Found');
+//   } else {
+//     print('Product not found');
+//   }
 }
