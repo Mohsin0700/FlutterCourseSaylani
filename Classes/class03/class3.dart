@@ -25,10 +25,13 @@ void main() {
 
   // Congratlaions our files/folder has been uploaded successfully
 
-  // "git status" command is used to check files / project status
-
   // FOR UPDATION OF PROJECT
   // git add . or git add filename
   // git commit -m 'message'
   // git push
+
+  // **************************************************************
+  // Extra commands
+  // "git status" command is used to check files / project status
+  // "git clone "link"" this command is use for cloning a repo from github to local device
 }
