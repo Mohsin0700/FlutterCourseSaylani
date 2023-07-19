@@ -1,31 +1,13 @@
 import 'dart:io';
+import 'userList.dart';
+import 'addUser.dart';
+import 'editUser.dart';
+import 'deleteUser.dart';
+import 'auth.dart';
 
 var userName;
 var userPass;
 var currentUser;
-
-// Sample List
-List<Map<String, dynamic>> allUsers = [
-  {'name': 'Hasan', 'password': 'admin123', 'roll': 'admin'},
-  {
-    'name': 'Ahsan',
-    'password': 'Ahsan123',
-    'course': 'Flutter',
-    'roll': 'student'
-  },
-  {
-    'name': 'Mohsin',
-    'password': 'Mohsin123',
-    'course': 'Dart',
-    'roll': 'student'
-  },
-  {
-    'name': 'Kamran',
-    'password': 'Kamran123',
-    'course': 'JavaScript',
-    'roll': 'student'
-  },
-];
 
 void main() {
   mainFunc();
@@ -86,91 +68,5 @@ void userPanel() {
     var newPassword = stdin.readLineSync();
     currentUser['password'] = newPassword;
     print('Password has been updated successfully');
-  }
-}
-
-// Authentication Function
-void login() {
-  allUsers.forEach((element) {
-    if (element['name'] == userName && element['password'] == userPass) {
-      currentUser = element;
-    }
-  });
-
-  if (currentUser != null) {
-    if (currentUser['roll'] == 'admin') {
-      adminPanel();
-    } else if (currentUser['roll'] == 'student') {
-      userPanel();
-    }
-  } else {
-    print('Incorrect username or password');
-  }
-}
-
-void addUser() {
-  print('Enter user name');
-  String newUserName = stdin.readLineSync()!;
-  print('Enter user password');
-  String newUserPass = stdin.readLineSync()!;
-  print('Enter user course');
-  String userCourse = stdin.readLineSync()!;
-  print('Enter user role');
-  String userRole = stdin.readLineSync()!;
-
-  Map<String, dynamic> newUser = {
-    'name': newUserName,
-    'password': newUserPass,
-    'course': userCourse,
-    'role': userRole
-  };
-
-  allUsers.add(newUser);
-  print('User has been added successfully');
-  adminPanel();
-}
-
-void editUser() {
-  bool userFound = false;
-  print('Enter Username');
-  String username = stdin.readLineSync()!;
-
-  allUsers.forEach((element) {
-    if (element['name'] == username) {
-      print(element);
-      print('Edit username');
-      element['name'] = stdin.readLineSync();
-      print('Edit user course');
-      element['course'] = stdin.readLineSync();
-      print('Edit user role');
-      element['role'] = stdin.readLineSync();
-      userFound = true;
-
-      print('User has been updated successfully');
-      adminPanel();
-    }
-  });
-
-  if (!userFound) {
-    print('User not found');
-    adminPanel();
-  }
-}
-
-void deleteUser() {
-  bool userFound = false;
-  print('Enter username');
-  String username = stdin.readLineSync()!;
-
-  for (var i = 0; i < allUsers.length; i++) {
-    if (allUsers[i]['name'] == username) {
-      allUsers.removeWhere((element) => element['name'] == username);
-      print('User deleted successfully');
-      adminPanel();
-      userFound = true;
-    }
-  }
-  if (!userFound) {
-    print('User not found');
   }
 }
