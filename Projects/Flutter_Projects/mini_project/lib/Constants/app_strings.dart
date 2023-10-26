@@ -11,4 +11,6 @@ class MyAppString {
           "There's something for everyone \nto enjoy with Sweet Shop \nFavourites Screen 2",
     },
   ];
+
+  static String customerName = 'Mohsin';
 }

@@ -1,0 +1,1 @@
+// Class 23 was about add to cart and add to favourate functonality

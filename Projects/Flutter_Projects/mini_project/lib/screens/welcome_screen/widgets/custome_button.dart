@@ -14,7 +14,7 @@ class MyCustomBUtton extends StatelessWidget {
       ),
       width: MediaQuery.of(context).size.width * 0.6,
       height: MediaQuery.of(context).size.height * 0.09,
-      child: GestureDetector(
+      child: InkWell(
         onTap: onTap,
         child: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,

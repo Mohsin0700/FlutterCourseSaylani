@@ -16,6 +16,7 @@ class _MyPageViewState extends State<MyPageView> {
       itemCount: MyAppString.constTexts.length,
       itemBuilder: (context, index) {
         return Column(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Stack(
@@ -31,7 +32,7 @@ class _MyPageViewState extends State<MyPageView> {
                 const Positioned(
                     right: 150,
                     bottom: 0,
-                    child: Image(image: AssetImage('images/Emoji.png')))
+                    child: Image(image: AssetImage('assets/images/Emoji.png')))
               ],
             ),
             const SizedBox(

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "583225051699",
+    "project_id": "flutter-authentication-smit",
+    "storage_bucket": "flutter-authentication-smit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583225051699:android:7524d898fba49de303b146",
+        "android_client_info": {
+          "package_name": "com.example.fir_auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyG1tGyJphBqLTJyv97xVByJh1RlmJGnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
